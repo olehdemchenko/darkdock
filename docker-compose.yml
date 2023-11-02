@@ -26,6 +26,7 @@ services:
         - TZ=${TIME_ZONE}
         - USER_NAME=${USER_NAME}
         - GROUP_NAME=${GROUP_NAME}
+        - INSTALL_ZSH=${INSTALL_ZSH}
     volumes:
       - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}${APP_CODE_CONTAINER_FLAG}
     tty: true

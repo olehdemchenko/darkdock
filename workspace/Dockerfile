@@ -10,6 +10,8 @@ FROM php:${PHP_VERSION}-zts
 # Set Environment Variables
 ENV DEBIAN_FRONTEND noninteractive
 
+ENV SHELL /bin/bash
+
 #
 #--------------------------------------------------------------------------
 # Software's Installation
@@ -77,4 +79,24 @@ ENV TZ ${TZ}
 
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
+USER ${USER_NAME}
+
+# ENV TMPDIR /home/${USER_NAME}/pnpm_store
+
+RUN mkdir /home/${USER_NAME}/pnpm_store && \
+    curl -fsSL https://get.pnpm.io/install.sh | sh -
+
+ENV PNPM_HOME="/home/darkdock/.local/share/pnpm"
+ENV PATH $PATH:/home/darkdock/.local/share/pnpm
+ENV PNPM_TMPDIR=/home/${USER_NAME}/pnpm_store
+
+RUN cd ~ && \
+    . ~/.bashrc && \
+    pnpm -v && \
+    pnpm env use --global lts
+
+USER root
+
 COPY ./xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+
+WORKDIR /var/www

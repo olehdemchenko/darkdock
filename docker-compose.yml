@@ -26,7 +26,6 @@ services:
         - TZ=${TIME_ZONE}
         - USER_NAME=${USER_NAME}
         - GROUP_NAME=${GROUP_NAME}
-        - INSTALL_ZSH=${INSTALL_ZSH}
     volumes:
       - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}${APP_CODE_CONTAINER_FLAG}
     tty: true
@@ -105,24 +104,6 @@ services:
       - "${MYSQL_PORT}:3306"
     networks:
       - backend
-
-### Percona ################################################
-  percona:
-    build:
-      context: ./percona
-    environment:
-      - MYSQL_DATABASE=${PERCONA_DATABASE}
-      - MYSQL_USER=${PERCONA_USER}
-      - MYSQL_PASSWORD=${PERCONA_PASSWORD}
-      - MYSQL_ROOT_PASSWORD=${PERCONA_ROOT_PASSWORD}
-    volumes:
-      - ${DATA_PATH_HOST}/percona:/var/lib/mysql
-      - ${PERCONA_ENTRYPOINT_INITDB}:/docker-entrypoint-initdb.d
-    ports:
-      - "${PERCONA_PORT}:3306"
-    networks:
-      - backend
-
 
 ### PostgreSQL ###########################################
   postgres:

@@ -1,0 +1,138 @@
+2024/09/21 07:35:04 [info] 11#11 discovery started
+2024/09/21 07:35:04 [notice] 11#11 module: php 8.3.11 "/usr/lib/unit/modules/php.unit.so"
+2024/09/21 07:35:04 [info] 10#10 controller started
+2024/09/21 07:35:04 [notice] 10#10 process 11 exited with code 0
+2024/09/21 07:35:04 [info] 15#15 router started
+2024/09/21 07:35:04 [info] 15#15 OpenSSL 3.0.14 4 Jun 2024, 300000e0
+2024/09/21 07:35:04 [info] 22#22 "php_app" prototype started
+2024/09/21 07:35:04 [info] 23#23 "php_app" application started
+2024/09/21 07:35:04 [notice] 10#10 process 14 exited with code 0
+2024/09/21 07:35:04 [notice] 10#10 process 15 exited with code 0
+2024/09/21 07:35:04 [notice] 22#22 app process 23 exited with code 0
+2024/09/21 07:35:04 [alert] 22#22 sendmsg(13, -1, -1, 2) failed (32: Broken pipe)
+2024/09/21 07:35:04 [notice] 10#10 process 22 exited with code 0
+2024/09/21 07:35:05 [info] 47#47 discovery started
+2024/09/21 07:35:05 [notice] 47#47 module: php 8.3.11 "/usr/lib/unit/modules/php.unit.so"
+2024/09/21 07:35:05 [info] 1#1 controller started
+2024/09/21 07:35:05 [notice] 1#1 process 47 exited with code 0
+2024/09/21 07:35:05 [info] 49#49 router started
+2024/09/21 07:35:05 [info] 49#49 OpenSSL 3.0.14 4 Jun 2024, 300000e0
+2024/09/21 07:35:05 [info] 50#50 "php_app" prototype started
+2024/09/21 07:35:05 [info] 51#51 "php_app" application started
+2024/09/21 07:40:03 [notice] 1#1 process 48 exited with code 0
+2024/09/21 07:40:03 [notice] 1#1 process 49 exited with code 0
+2024/09/21 07:40:03 [notice] 50#50 app process 51 exited with code 0
+2024/09/21 07:40:03 [alert] 50#50 sendmsg(13, -1, -1, 2) failed (32: Broken pipe)
+2024/09/21 07:40:03 [notice] 1#1 process 50 exited with code 0
+2024/09/21 07:44:03 [info] 9#9 discovery started
+2024/09/21 07:44:03 [notice] 9#9 module: php 8.3.11 "/usr/lib/unit/modules/php.unit.so"
+2024/09/21 07:44:03 [info] 1#1 controller started
+2024/09/21 07:44:03 [notice] 1#1 process 9 exited with code 0
+2024/09/21 07:44:03 [info] 11#11 router started
+2024/09/21 07:44:03 [info] 11#11 OpenSSL 3.0.14 4 Jun 2024, 300000e0
+2024/09/21 07:44:03 [info] 12#12 "php_app" prototype started
+2024/09/21 07:44:03 [info] 13#13 "php_app" application started
+2024/09/21 08:30:58 [notice] 1#1 process 10 exited with code 0
+2024/09/21 08:30:58 [notice] 1#1 process 11 exited with code 0
+2024/09/21 08:30:58 [notice] 12#12 app process 13 exited with code 0
+2024/09/21 08:30:58 [alert] 12#12 sendmsg(13, -1, -1, 2) failed (32: Broken pipe)
+2024/09/21 08:30:58 [notice] 1#1 process 12 exited with code 0
+2024/09/21 08:31:37 [info] 11#11 discovery started
+2024/09/21 08:31:37 [notice] 11#11 module: php 8.3.11 "/usr/lib/unit/modules/php.unit.so"
+2024/09/21 08:31:37 [info] 10#10 controller started
+2024/09/21 08:31:37 [notice] 10#10 process 11 exited with code 0
+2024/09/21 08:31:37 [info] 15#15 router started
+2024/09/21 08:31:37 [info] 15#15 OpenSSL 3.0.14 4 Jun 2024, 300000e0
+2024/09/21 08:31:37 [info] 22#22 "laravel" prototype started
+2024/09/21 08:31:37 [info] 23#23 "laravel" application started
+2024/09/21 08:31:37 [notice] 10#10 process 14 exited with code 0
+2024/09/21 08:31:37 [notice] 10#10 process 15 exited with code 0
+2024/09/21 08:31:37 [notice] 22#22 app process 23 exited with code 0
+2024/09/21 08:31:37 [alert] 22#22 sendmsg(13, -1, -1, 2) failed (32: Broken pipe)
+2024/09/21 08:31:37 [notice] 10#10 process 22 exited with code 0
+2024/09/21 08:31:38 [info] 47#47 discovery started
+2024/09/21 08:31:38 [notice] 47#47 module: php 8.3.11 "/usr/lib/unit/modules/php.unit.so"
+2024/09/21 08:31:38 [info] 1#1 controller started
+2024/09/21 08:31:38 [notice] 1#1 process 47 exited with code 0
+2024/09/21 08:31:38 [info] 49#49 router started
+2024/09/21 08:31:38 [info] 49#49 OpenSSL 3.0.14 4 Jun 2024, 300000e0
+2024/09/21 08:31:38 [info] 50#50 "laravel" prototype started
+2024/09/21 08:31:38 [info] 51#51 "laravel" application started
+2024/09/21 08:33:45 [notice] 1#1 process 48 exited with code 0
+2024/09/21 08:33:45 [notice] 1#1 process 49 exited with code 0
+2024/09/21 08:33:45 [notice] 50#50 app process 51 exited with code 0
+2024/09/21 08:33:45 [alert] 50#50 sendmsg(13, -1, -1, 2) failed (32: Broken pipe)
+2024/09/21 08:33:45 [notice] 1#1 process 50 exited with code 0
+2024/09/21 08:33:51 [info] 11#11 discovery started
+2024/09/21 08:33:51 [notice] 11#11 module: php 8.3.11 "/usr/lib/unit/modules/php.unit.so"
+2024/09/21 08:33:51 [info] 10#10 controller started
+2024/09/21 08:33:51 [notice] 10#10 process 11 exited with code 0
+2024/09/21 08:33:51 [info] 15#15 router started
+2024/09/21 08:33:51 [info] 15#15 OpenSSL 3.0.14 4 Jun 2024, 300000e0
+2024/09/21 08:33:51 [info] 22#22 "laravel" prototype started
+2024/09/21 08:33:51 [info] 23#23 "laravel" application started
+2024/09/21 08:33:51 [notice] 10#10 process 14 exited with code 0
+2024/09/21 08:33:51 [notice] 10#10 process 15 exited with code 0
+2024/09/21 08:33:51 [notice] 22#22 app process 23 exited with code 0
+2024/09/21 08:33:51 [alert] 22#22 sendmsg(13, -1, -1, 2) failed (32: Broken pipe)
+2024/09/21 08:33:51 [notice] 10#10 process 22 exited with code 0
+2024/09/21 08:33:52 [info] 47#47 discovery started
+2024/09/21 08:33:52 [notice] 47#47 module: php 8.3.11 "/usr/lib/unit/modules/php.unit.so"
+2024/09/21 08:33:52 [info] 1#1 controller started
+2024/09/21 08:33:52 [notice] 1#1 process 47 exited with code 0
+2024/09/21 08:33:52 [info] 49#49 router started
+2024/09/21 08:33:52 [info] 49#49 OpenSSL 3.0.14 4 Jun 2024, 300000e0
+2024/09/21 08:33:52 [info] 50#50 "laravel" prototype started
+2024/09/21 08:33:52 [info] 51#51 "laravel" application started
+2024/09/21 08:34:54 [notice] 1#1 process 48 exited with code 0
+2024/09/21 08:34:54 [notice] 1#1 process 49 exited with code 0
+2024/09/21 08:34:54 [notice] 50#50 app process 51 exited with code 0
+2024/09/21 08:34:54 [alert] 50#50 sendmsg(13, -1, -1, 2) failed (32: Broken pipe)
+2024/09/21 08:34:54 [notice] 1#1 process 50 exited with code 0
+2024/09/21 09:05:01 [info] 11#11 discovery started
+2024/09/21 09:05:01 [notice] 11#11 module: php 8.3.11 "/usr/lib/unit/modules/php.unit.so"
+2024/09/21 09:05:01 [info] 10#10 controller started
+2024/09/21 09:05:01 [notice] 10#10 process 11 exited with code 0
+2024/09/21 09:05:01 [info] 15#15 router started
+2024/09/21 09:05:01 [info] 15#15 OpenSSL 3.0.14 4 Jun 2024, 300000e0
+2024/09/21 09:05:01 [info] 22#22 "laravel" prototype started
+2024/09/21 09:05:01 [info] 23#23 "laravel" application started
+2024/09/21 09:05:01 [notice] 10#10 process 14 exited with code 0
+2024/09/21 09:05:01 [notice] 10#10 process 15 exited with code 0
+2024/09/21 09:05:01 [notice] 22#22 app process 23 exited with code 0
+2024/09/21 09:05:01 [alert] 22#22 sendmsg(13, -1, -1, 2) failed (32: Broken pipe)
+2024/09/21 09:05:01 [notice] 10#10 process 22 exited with code 0
+2024/09/21 09:05:02 [info] 47#47 discovery started
+2024/09/21 09:05:02 [notice] 47#47 module: php 8.3.11 "/usr/lib/unit/modules/php.unit.so"
+2024/09/21 09:05:02 [info] 1#1 controller started
+2024/09/21 09:05:02 [notice] 1#1 process 47 exited with code 0
+2024/09/21 09:05:02 [info] 49#49 router started
+2024/09/21 09:05:02 [info] 49#49 OpenSSL 3.0.14 4 Jun 2024, 300000e0
+2024/09/21 09:05:02 [info] 50#50 "laravel" prototype started
+2024/09/21 09:05:02 [info] 51#51 "laravel" application started
+2024/09/21 09:09:47 [notice] 51#51 [unit] #8: php message: Xdebug: [Log Files] File '/var/log/nginx/xdebug.log' could not be opened.
+2024/09/21 09:09:47 [notice] 51#51 [unit] #8: php message: Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port).
+2024/09/21 09:10:20 [info] 49#52 *15 writev(77, 2) failed (32: Broken pipe)
+2024/09/21 09:10:20 [notice] 51#51 [unit] php message: Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port).
+2024/09/21 09:10:20 [notice] 51#51 [unit] php message: Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port).
+2024/09/21 09:10:20 [notice] 51#51 [unit] #9: php message: Xdebug: [Log Files] File '/var/log/nginx/xdebug.log' could not be opened.
+2024/09/21 09:10:20 [notice] 51#51 [unit] #9: php message: Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port).
+2024/09/21 09:10:52 [notice] 51#51 [unit] php message: Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port).
+2024/09/21 09:10:52 [notice] 51#51 [unit] php message: Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port).
+2024/09/21 09:10:52 [notice] 51#51 [unit] #10: php message: Xdebug: [Log Files] File '/var/log/nginx/xdebug.log' could not be opened.
+2024/09/21 09:10:52 [notice] 51#51 [unit] #10: php message: Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port).
+2024/09/21 09:11:25 [info] 49#52 *39 writev(80, 2) failed (32: Broken pipe)
+2024/09/21 09:11:25 [notice] 51#51 [unit] php message: Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port).
+2024/09/21 09:11:25 [notice] 51#51 [unit] php message: Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port).
+2024/09/21 09:11:25 [notice] 51#51 [unit] #11: php message: Xdebug: [Log Files] File '/var/log/nginx/xdebug.log' could not be opened.
+2024/09/21 09:11:25 [notice] 51#51 [unit] #11: php message: Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port).
+2024/09/21 09:11:57 [notice] 51#51 [unit] php message: Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port).
+2024/09/21 09:11:57 [notice] 51#51 [unit] php message: Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port).
+2024/09/21 09:14:15 [notice] 51#51 [unit] #12: php message: Xdebug: [Log Files] File '/var/log/nginx/xdebug.log' could not be opened.
+2024/09/21 09:14:15 [notice] 51#51 [unit] #12: php message: Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port).
+2024/09/21 09:14:45 [notice] 51#51 [unit] php message: Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port).
+2024/09/21 09:14:45 [notice] 51#51 [unit] php message: Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port).
+2024/09/21 09:14:46 [notice] 51#51 [unit] #13: php message: Xdebug: [Log Files] File '/var/log/nginx/xdebug.log' could not be opened.
+2024/09/21 09:14:46 [notice] 51#51 [unit] #13: php message: Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port).
+2024/09/21 09:14:46 [notice] 51#51 [unit] php message: Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port).
+2024/09/21 09:14:47 [notice] 51#51 [unit] php message: Xdebug: [Step Debug] Could not connect to debugging client. Tried: host.docker.internal:9003 (through xdebug.client_host/xdebug.client_port).

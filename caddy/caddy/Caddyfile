@@ -1,0 +1,9 @@
+# Docs: https://caddyserver.com/docs/caddyfile
+darkdock.test {
+    root * /var/www/laravel/public
+    php_fastcgi php-fpm:9000
+    file_server
+
+    encode zstd gzip
+    tls internal
+}

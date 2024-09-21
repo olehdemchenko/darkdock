@@ -1,0 +1,29 @@
+{                          
+    "certificates": {
+        "bundle": {
+            "key": "<key type>",
+            "chain": [
+                "<certificate chain, omitted for brevity>"
+            ]
+        }
+    },
+    "config": {                                   
+        "listeners": {                                                         
+            "*:80": {                                                        
+                "pass": "applications/php_app"                                 
+            },
+            "*:443": {
+                "pass": "applications/php_app",
+                "tls": {
+                    "certificate": "bundle"
+                }
+            }                                                                
+        },                                                                     
+        "applications": {                                                      
+            "php_app": {                                                       
+                "type": "php",                                                 
+                "root": "/www/"                                                
+            }                                                                  
+        }
+    }
+}

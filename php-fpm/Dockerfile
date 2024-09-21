@@ -10,7 +10,6 @@ FROM php:${PHP_VERSION}-fpm
 # Set Environment Variables
 ENV DEBIAN_FRONTEND noninteractive
 
-#
 #--------------------------------------------------------------------------
 # Software's Installation
 #--------------------------------------------------------------------------
@@ -70,6 +69,7 @@ ENV PGID ${PGID}
 RUN groupmod -o -g ${PGID} www-data && \
     usermod -o -u ${PUID} -g www-data www-data
 
+# Should be placed at the end in order to facilitate fast builds when activating/deactivating Xdebug by commentin zend_extension=xdebug.so in xdebug.ini
 COPY ./xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 
 WORKDIR /var/www

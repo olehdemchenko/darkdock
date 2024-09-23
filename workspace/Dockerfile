@@ -87,7 +87,7 @@ USER ${USER_NAME}
 RUN mkdir /home/${USER_NAME}/pnpm_store && \
     curl -fsSL https://get.pnpm.io/install.sh | sh -
 
-ENV PNPM_HOME="/home/darkdock/.local/share/pnpm"
+ENV PNPM_HOME=/home/darkdock/.local/share/pnpm
 ENV PATH $PATH:/home/darkdock/.local/share/pnpm
 ENV PNPM_TMPDIR=/home/${USER_NAME}/pnpm_store
 

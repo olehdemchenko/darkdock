@@ -228,7 +228,13 @@ services:
     networks:
       - backend
 
-### Soketi Server ##############################################
+### Node #################################################
+  node:
+    build:
+      context: ./node
+      
+
+### Soketi Server ########################################
   soketi:
     build:
       context: ./soketi

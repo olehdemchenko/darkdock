@@ -1,9 +1,38 @@
 # Docs: https://caddyserver.com/docs/caddyfile
-darkdock.test {
+
+{
+    # Automatically create self-signed certificates for localhost domains
+    acme_ca https://localhost:2019/acme/local/directory
+    local_certs
+}
+
+laravel.test {
     root * /var/www/laravel/public
     php_fastcgi php-fpm:9000
     file_server
 
     encode zstd gzip
     tls internal
+}
+
+# Laravel Application
+mbr.test {
+    root * /var/www/mbr/public
+    encode gzip
+    php_fastcgi php-fpm:9000
+    file_server
+    tls internal {
+        on_demand
+    }
+}
+
+# Symfony Application
+symfony.test {
+    root * /var/www/symfony/public
+    encode gzip
+    php_fastcgi php-fpm:9000
+    file_server
+    tls internal {
+        on_demand
+    }
 }

@@ -1,6 +1,6 @@
 FROM quay.io/soketi/soketi:latest-16-debian
 
-LABEL maintainer="Er-Niebla <er.niebla@gmail.com>"
+LABEL maintainer="Oleh Demchenko <blacklife1992@gmail.com>"
 
 COPY config.json /app/bin/config.json
 

@@ -1,0 +1,26 @@
+tls:
+  certificates:
+    - certFile: "/certs/front-test.crt"
+      keyFile: "/certs/front-test.key"
+
+http:
+  routers:
+    front:
+      rule: "Host(`front.test`)"
+      service: workspace
+      entryPoints:
+        - web
+        - websecure
+      middlewares:
+        - front-https-redirect
+      tls: {}
+  services:
+    workspace:
+      loadBalancer:
+        passHostHeader: true
+        servers:
+          - url: "http://workspace:3000"
+  middlewares:
+    front-https-redirect:
+      redirectScheme:
+        scheme: "https"

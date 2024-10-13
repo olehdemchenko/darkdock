@@ -1,0 +1,35 @@
+http:
+  routers:
+    {{range $i, $e := until 100 }}
+    router{{ $e }}-{{ env "MY_ENV_VAR" }}:
+      # ...
+    {{end}}
+
+  services:
+    {{range $i, $e := until 100 }}
+    application{{ $e }}:
+      # ...
+    {{end}}
+
+tcp:
+  routers:
+    {{range $i, $e := until 100 }}
+    router{{ $e }}:
+      # ...
+    {{end}}
+
+  services:
+    {{range $i, $e := until 100 }}
+    service{{ $e }}:
+      # ...
+    {{end}}
+
+tls:
+  certificates:
+  {{ range $i, $e := until 10 }}
+  - certFile: "/etc/traefik/cert-{{ $e }}.pem"
+    keyFile: "/etc/traefik/cert-{{ $e }}.key"
+    store:
+    - "my-store-foo-{{ $e }}"
+    - "my-store-bar-{{ $e }}"
+  {{end}}

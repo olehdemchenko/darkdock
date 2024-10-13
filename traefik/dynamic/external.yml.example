@@ -1,0 +1,16 @@
+http:
+  routers:
+    external:
+      rule: "Host(`external.test`)"
+      service: external_service
+      entryPoints:
+        - websecure
+      tls:
+        certResolver: letsencrypt
+        # certResolver: selfsigned 
+
+  services:
+    external_service:
+      loadBalancer:
+        servers:
+          - url: "http://<EXTERNAL_SERVER_IP>"

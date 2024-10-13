@@ -1,0 +1,16 @@
+http:
+  routers:
+    symfony:
+      rule: "Host(`symfony.test`)"
+      service: symfony_service
+      entryPoints:
+        - websecure
+      tls:
+        certResolver: letsencrypt
+        # certResolver: selfsigned
+
+  services:
+    symfony_service:
+      loadBalancer:
+        servers:
+          - url: "nginx:80"

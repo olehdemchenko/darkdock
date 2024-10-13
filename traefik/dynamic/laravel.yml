@@ -1,0 +1,26 @@
+tls:
+  certificates:
+    - certFile: "/certs/laravel.crt"
+      keyFile: "/certs/laravel.key"
+
+http:
+  routers:
+    laravel:
+      rule: "Host(`laravel.test`)"
+      service: laravel_service
+      entryPoints:
+        - web
+        - websecure
+      middlewares:
+        - laravel-https-redirect
+      tls: {}
+  services:
+    laravel_service:
+      loadBalancer:
+        passHostHeader: true
+        servers:
+          - url: "http://nginx:80"
+  middlewares:
+    laravel-https-redirect:
+      redirectScheme:
+        scheme: "https"

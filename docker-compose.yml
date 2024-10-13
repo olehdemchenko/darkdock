@@ -19,7 +19,7 @@ volumes:
     driver: ${VOLUMES_DRIVER}
   
 services:
-### Workspace ############################################
+### Workspace #############################################
   workspace:
     build:
       context: ./workspace
@@ -40,7 +40,7 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway" 
   
-### PHP_FPM ############################################## 
+### PHP_FPM ###############################################
   php-fpm:
     build:
       context: ./php-fpm
@@ -55,7 +55,7 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway" 
 
-### Swoole ###############################################
+### Swoole ################################################
   swoole:
     build:
       context: ./swoole
@@ -64,7 +64,7 @@ services:
       - frontend
       - backend
 
-### Nginx Unit ###########################################
+### Nginx Unit ############################################
   nunit:
     build:
       context: ./nunit
@@ -83,7 +83,31 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway" 
 
-### NGINX Server #########################################
+### TRAEFIK ###############################################
+  traefik:
+    build:
+      context: ./traefik
+      args:
+        - TRAEFIK_VERSION=${TRAEFIK_VERSION}
+        - TRAEFIK_HOST_HTTP_PORT=${TRAEFIK_HOST_HTTP_PORT}
+        - TRAEFIK_HOST_HTTPS_PORT=${TRAEFIK_HOST_HTTPS_PORT}
+        - TRAEFIK_DASHBOARD_PORT=${TRAEFIK_DASHBOARD_PORT}
+    command:
+      - "--entryPoints.web.address=:${TRAEFIK_HOST_HTTP_PORT}"
+      - "--entryPoints.websecure.address=:${TRAEFIK_HOST_HTTPS_PORT}"
+    volumes:
+      - ./traefik/traefik.yml:/etc/traefik/traefik.yml
+      - ./traefik/dynamic:/dynamic
+      - ./traefik/certs:/certs
+    ports:
+      - "${TRAEFIK_HOST_HTTP_PORT}:80"
+      - "${TRAEFIK_HOST_HTTPS_PORT}:443"
+      - "${TRAEFIK_DASHBOARD_PORT}:8080"
+    networks:
+      - frontend
+      - backend
+
+### NGINX Server ##########################################
   nginx:
     build:
       context: ./nginx
@@ -98,9 +122,9 @@ services:
       - ${NGINX_HOST_LOG_PATH}:/var/log/nginx
       - ${NGINX_SITES_PATH}:/etc/nginx/sites-available
       - ${NGINX_SSL_PATH}:/etc/nginx/ssl
-    ports:
-      - "${NGINX_HOST_HTTP_PORT}:80"
-      - "${NGINX_HOST_HTTPS_PORT}:443"
+    # ports:
+    #   - "${NGINX_HOST_HTTP_PORT}:80"
+    #   - "${NGINX_HOST_HTTPS_PORT}:443"
     depends_on:
       - php-fpm
     networks:
@@ -109,7 +133,7 @@ services:
     extra_hosts:
       - "host.docker.internal:host-gateway"
 
-### Caddy Server #########################################
+### Caddy Server ##########################################
   caddy:
     restart: always
     build: ./caddy
@@ -127,7 +151,7 @@ services:
       - frontend
       - backend
 
-### MySQL ################################################
+### MySQL #################################################
   mysql:
     build:
       context: ./mysql
@@ -147,7 +171,7 @@ services:
     networks:
       - backend
 
-### Percona ################################################
+### Percona ###############################################
   percona:
     restart: always
     build:
@@ -165,7 +189,7 @@ services:
     networks:
       - backend
 
-### PostgreSQL ###########################################
+### PostgreSQL ############################################
   postgres:
     build:
       context: ./postgres
@@ -183,7 +207,7 @@ services:
     networks:
       - backend
 
-### pgbackups PostgreSQL ###########################################
+### pgbackups PostgreSQL ##################################
   pgbackups:
     image: prodrigestivill/postgres-backup-local
     restart: always
@@ -199,7 +223,7 @@ services:
     networks:
       - backend
 
-### PostgreSQL PostGis ###################################
+### PostgreSQL PostGis ####################################
   postgres-postgis:
     build:
       context: ./postgres-postgis
@@ -217,7 +241,7 @@ services:
     networks:
       - backend
 
-### Redis ################################################
+### Redis #################################################
   redis:
     build: ./redis
     volumes:
@@ -228,13 +252,12 @@ services:
     networks:
       - backend
 
-### Node #################################################
+### Node ##################################################
   node:
     build:
-      context: ./node
-      
+      context: ./node  
 
-### Soketi Server ########################################
+### Soketi Server #########################################
   soketi:
     build:
       context: ./soketi
@@ -247,7 +270,7 @@ services:
       - frontend
       - backend
 
-### Mailhog ################################################
+### Mailhog ###############################################
   mailhog:
     restart: always
     build: ./mailhog

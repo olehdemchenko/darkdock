@@ -24,6 +24,15 @@ global:
 entryPoints:
   web:
     address: :80
+    reusePort: true
+  https:
+    address: :80
+    reusePort: true
+    http:
+      redirections:
+        entryPoint:
+          to: websecure
+          scheme: https
 
   websecure:
     address: :443

@@ -9,10 +9,8 @@ http:
       rule: "Host(`laravel.test`)"
       service: laravel_service
       entryPoints:
-        - web
+        - https
         - websecure
-      middlewares:
-        - laravel-https-redirect
       tls: {}
   services:
     laravel_service:
@@ -20,7 +18,3 @@ http:
         passHostHeader: true
         servers:
           - url: "http://nginx:80"
-  middlewares:
-    laravel-https-redirect:
-      redirectScheme:
-        scheme: "https"

@@ -7,7 +7,7 @@
             "secret": "some-secret",
             "webhooks": [
                 {
-                    "url": "https://mbr.test",
+                    "url": "https://laravel.test",
                     "event_types": ["channel_occupied"]
                 }
             ]

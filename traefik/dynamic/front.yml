@@ -9,18 +9,12 @@ http:
       rule: "Host(`front.test`)"
       service: workspace
       entryPoints:
-        - web
+        - https
         - websecure
-      middlewares:
-        - front-https-redirect
       tls: {}
   services:
     workspace:
       loadBalancer:
         passHostHeader: true
         servers:
-          - url: "http://workspace:3000"
-  middlewares:
-    front-https-redirect:
-      redirectScheme:
-        scheme: "https"
+          - url: "http://host.docker.internal:6006"

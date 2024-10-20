@@ -106,6 +106,8 @@ services:
     networks:
       - frontend
       - backend
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 
 ### NGINX Server ##########################################
   nginx:

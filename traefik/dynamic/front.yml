@@ -5,16 +5,39 @@ tls:
 
 http:
   routers:
+    backend:
+      rule:  "Host(`front.test`) && PathPrefix(`/backend`)"
+      priority: 10
+      service: laravel_service
+      entryPoints:
+        - https
+        - websecure
+      tls: {}
+      middlewares:
+        - strip-backend-prefix # Apply middleware to strip /backend from the path
     front:
       rule: "Host(`front.test`)"
+      priority: 1
       service: workspace
       entryPoints:
         - https
         - websecure
       tls: {}
   services:
+    laravel_service:
+        loadBalancer:
+          passHostHeader: false
+          servers:
+            - url: "http://nginx:80"
     workspace:
       loadBalancer:
         passHostHeader: true
         servers:
           - url: "http://host.docker.internal:6006"
+
+  middlewares:
+    # Middleware to strip /backend from the path
+    strip-backend-prefix:
+      stripPrefix:
+        prefixes:
+          - "/backend"

@@ -1,0 +1,17 @@
+http:
+  routers:
+    devlab:
+      rule: "Host(`devlab.pp.ua`)"
+      service: nginx_service
+      entryPoints:
+        - web
+        - websecure
+      tls:
+        certResolver: letsencrypt
+  services:
+    nginx_service:
+      loadBalancer:
+        passHostHeader: true
+        servers:
+          - url: "http://nginx:80"
+

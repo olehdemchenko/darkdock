@@ -25,14 +25,21 @@ entryPoints:
   web:
     address: :80
     reusePort: true
+  https:
+    address: :80
+    reusePort: true
     http:
       redirections:
         entryPoint:
           to: websecure
           scheme: https
+
   websecure:
     address: :443
-    reusePort: true
+    asDefault: true
+    http:
+        tls:
+          certResolver: letsencrypt
 
   # streaming:
   #   address: ":1704/udp"
@@ -156,11 +163,16 @@ providers:
 #    exposedByDefault: false
 
 certificatesResolvers:
+  selfsigned:
+      acme:
+        email: "your-email@example.com"
+        storage: "acme.json"
+        tlsChallenge: {}
   letsencrypt:
     acme:
       email: "blacklife1992@gmail.com"
       storage: "acme.json"
-      tlsChallenge: true
+      tlsChallenge: {}
   zerossl:
     acme:
       email: "blacklife1992@gmail.com"              # Your ZeroSSL account email

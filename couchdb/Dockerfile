@@ -1,0 +1,4 @@
+
+FROM couchdb
+
+EXPOSE 5984

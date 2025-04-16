@@ -105,11 +105,11 @@ entryPoints:
 api:
   # Optional
   # Default: false
-  insecure: true
+  insecure: false
 
   # Optional
   # Default: true
-  dashboard: true
+  dashboard: false
 
 ################################################################
 # Ping configuration
@@ -160,12 +160,17 @@ certificatesResolvers:
     acme:
       email: "blacklife1992@gmail.com"
       storage: "acme.json"
-      tlsChallenge: true
+      tlsChallenge: {}
   zerossl:
     acme:
-      email: "blacklife1992@gmail.com"              # Your ZeroSSL account email
+#      email: "blacklife1992@gmail.com"              # Your ZeroSSL account email
+#      eab:
+#        kid: "IQmukaE3_rB-Bsy6XLyH2Q"
+#        hmacEncoded: "pQJiQ0E_GKcfcvCaedgKKx86VgVodRQIK7eCvPacTtuboaH_x3a6XcWmM0QWXrfDjg5uYvxaA912fro3dVK8FQ"
       storage: "acme.json"                          # Store certificate information
       caServer: "https://acme.zerossl.com/v2/DV90"  # ZeroSSL's ACME CA server
+      httpChallenge:
+        entryPoint: web
 
 log:
-  level: DEBUG
+  level: ERROR

@@ -95,6 +95,8 @@ services:
     command:
       - "--entryPoints.web.address=:${TRAEFIK_HOST_HTTP_PORT}"
       - "--entryPoints.websecure.address=:${TRAEFIK_HOST_HTTPS_PORT}"
+      - --certificatesresolvers.zerossl.acme.eab.kid=${ZEROSSL_EAB_KID}
+      - --certificatesresolvers.zerossl.acme.eab.hmacencoded=${ZEROSSL_EAB_HMAC}
     volumes:
       - ./traefik/traefik.yml:/etc/traefik/traefik.yml
       - ./traefik/dynamic:/dynamic
@@ -106,6 +108,7 @@ services:
       - "${TRAEFIK_DASHBOARD_PORT}:8080"
     labels:
       - "traefik.http.routers.traefik.service=api@internal"
+      
     networks:
       - frontend
       - backend
